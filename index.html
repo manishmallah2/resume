@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Resume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            background-color: #0d1117;
+        }
+        #background {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .section {
+            margin: 30px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        .section:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background: #ff6600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .button:hover {
+            background: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <div id="background"></div>
+    <div class="container">
+        <h1>Data Analyst Resume</h1>
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Experienced Data Analyst skilled in Python, SQL, Power BI, and Excel automation.</p>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <p>Python, SQL, VBA, Power BI, MySQL, Excel, Data Visualization, Web Scraping</p>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <p>Banker Metrics Dashboard, Automated Reporting in Excel, E-commerce Data Analysis</p>
+        </div>
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email: your.email@example.com | LinkedIn: linkedin.com/in/yourprofile</p>
+        </div>
+        <button class="button" onclick="alert('Thanks for visiting!')">Say Hi!</button>
+    </div>
+    <script>
+        VANTA.GLOBE({
+            el: "#background",
+            color: 0xff6600,
+            backgroundColor: 0x0d1117
+        });
+    </script>
+</body>
+</html>
